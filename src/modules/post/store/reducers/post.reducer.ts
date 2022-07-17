@@ -3,11 +3,11 @@ import { Action } from '../actions-types/index';
 import { Post } from "../../interfaces/post.interfaces";
 
 interface stateReducer {
-  post: Post[]
+  posts: Post[]
 }
 
 const initialState:stateReducer = {
-  post: []
+  posts: []
 }
 
 const reducerPost = (
@@ -19,7 +19,7 @@ const reducerPost = (
       
       return {
         ...state,
-        post: [...action.payload]
+        posts: [...action.payload]
       }
   
     default:
