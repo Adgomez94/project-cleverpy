@@ -4,10 +4,10 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import reducerPost from '../modules/post/store/reducers/post.reducer';
 
 const rootReducer = combineReducers({
-  reducerPost
+  posts: reducerPost
 })
 
-export type RootState = ReturnType<typeof reducerPost>
+export type RootState = ReturnType<typeof rootReducer>
 
 export const store = createStore(
   rootReducer,

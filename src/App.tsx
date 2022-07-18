@@ -3,7 +3,9 @@ import PostView from './modules/post/views/PostView'
 
 const App = () => {
   return (
-    <PostView />
+    <div className="container">
+      <PostView />
+    </div>
   )
 }
 

@@ -1,3 +1,5 @@
-div {
-  color:aqua
-}
+@import './base/normalize';
+@import './base/global';
+
+@import './components/container.scss';
+@import './components/cards.scss';
