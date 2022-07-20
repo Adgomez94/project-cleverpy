@@ -1,11 +1,12 @@
 import { Post } from "../interfaces/post.interfaces"
 
 interface Props {
-  post: Post
+  post: Post,
+  handleDelete: (id:number) => void
 }
 
 
-const Card = ({ post }:Props) => {
+const Card = ({ post, handleDelete }:Props) => {
 
   const { body, id, title, userId } = post
 
@@ -18,7 +19,10 @@ const Card = ({ post }:Props) => {
         <p>{body}</p>
       </div>
       <div className="card__footer">
-        <h3>{userId}</h3>
+        <h3>{ userId }</h3>
+        <button
+          onClick={()=> handleDelete(id)}
+        >Eliminar</button>
       </div>
     </div>
   )

@@ -10,10 +10,10 @@ const initialState:stateReducer = {
   posts: []
 }
 
-const reducerPost = (
-  state: stateReducer = initialState,
-  action: Action
-) => {
+const reducerPost = ( state: stateReducer = initialState, action: Action ) => {
+
+  const { posts } = state
+
   switch (action.type) {
     case TypePost.POSTLOAD:
       
@@ -21,6 +21,12 @@ const reducerPost = (
         ...state,
         posts: [...action.payload]
       }
+    
+    case TypePost.DELETEPOST:
+      return {
+        ...state,
+        posts: posts.filter(post => post.id !== action.payload.id)
+      }  
   
     default:
       return state

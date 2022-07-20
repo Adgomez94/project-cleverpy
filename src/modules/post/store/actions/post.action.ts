@@ -18,3 +18,9 @@ export const postLoaded = ( posts:Post[] ):Action => ({
   
 })
 
+export const postDeleted = ( id:number ):Action => ({
+  type: TypePost.DELETEPOST,
+  payload: { id }
+  
+})
+

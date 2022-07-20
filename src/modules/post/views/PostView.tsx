@@ -11,11 +11,15 @@ const PostView = () => {
 
   const { posts } = useSelector( (state:RootState) => state.posts )
   const dispatch = useDispatch()
-  const { actionPostLoaded } = bindActionCreators(actionsPost, dispatch)
+  const { actionPostLoaded, postDeleted } = bindActionCreators(actionsPost, dispatch)
 
   useEffect(() => {
     actionPostLoaded()
   }, [])
+
+  const handleDelete = ( id:number ) => {
+    postDeleted(id)
+  }
 
   return (
     <div className="container__post">
@@ -24,6 +28,7 @@ const PostView = () => {
           <Card
             key={post.id} 
             post={post}
+            handleDelete={ handleDelete }
           />
         ))
       }

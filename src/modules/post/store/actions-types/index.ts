@@ -6,4 +6,9 @@ interface LoadPost {
   payload: Post[]
 }
 
-export type Action = LoadPost
+interface DeletePost {
+  type: TypePost.DELETEPOST,
+  payload: { id: number }
+}
+
+export type Action = LoadPost | DeletePost
