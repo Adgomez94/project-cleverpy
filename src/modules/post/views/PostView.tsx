@@ -5,6 +5,8 @@ import Card from "../components/Card"
 
 import { actionsPost } from '../store'
 import { RootState } from '../../../store/index';
+import { NavLink } from "react-router-dom"
+import Header from "../../../shared/components/Header"
 
 
 const PostView = () => {
@@ -22,17 +24,20 @@ const PostView = () => {
   }
 
   return (
-    <div className="container__post">
-      {
-        posts.map( post =>(
-          <Card
-            key={post.id} 
-            post={post}
-            handleDelete={ handleDelete }
-          />
-        ))
-      }
-    </div>
+    <>
+      <Header />
+      <div className="container__post">
+        {
+          posts.map( post =>(
+            <Card
+              key={post.id} 
+              post={post}
+              handleDelete={ handleDelete }
+            />
+          ))
+        }
+      </div>
+    </>
   )
 }
 

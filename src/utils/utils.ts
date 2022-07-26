@@ -10,7 +10,7 @@ export default {
     return regex.test(email)
   },
   regexPassword( password:string ) {
-    const regex = /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/
+    const regex = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/
     return regex.test(password)
   }
 } as Utils

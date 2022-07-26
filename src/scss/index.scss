@@ -1,5 +1,8 @@
 @import './base/normalize';
+@import './base/variables';
 @import './base/global';
 
 @import './components/container.scss';
 @import './components/cards.scss';
+@import './components/auth.scss';
+@import './components/header.scss';

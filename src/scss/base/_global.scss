@@ -11,5 +11,76 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #212025;
+  background-color: $primary;
+}
+
+h2  {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: 20px;
+  color: $white;
+}
+
+p {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 300;
+  color: $white;
+  letter-spacing: 0.5px;
+}
+
+.btn {
+  position: relative;
+  padding: 1rem 5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: $white;
+  font-size: 18px;
+  overflow: hidden;
+  transition: all 500ms ease;  
+  z-index: 0;
+  font-weight: 700;
+  cursor: pointer;
+  border: transparent;
+}
+
+.btn-green {
+  border: 2px solid $green;
+}
+
+.btn-green::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: $green;
+  transition: all 500ms ease;
+  z-index: -1;
+}
+
+.btn-red::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  background-color: $red;
+  transition: all 500ms ease;
+  z-index: -1;
+  
+}
+
+.btn::before {
+  width: 0;
+  height: 100%;
+}
+
+.btn:hover::before {
+  width: 100%;
 }

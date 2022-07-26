@@ -21,6 +21,7 @@ const Card = ({ post, handleDelete }:Props) => {
       <div className="card__footer">
         <h3>{ userId }</h3>
         <button
+        className="btn-delete"
           onClick={()=> handleDelete(id)}
         >Eliminar</button>
       </div>

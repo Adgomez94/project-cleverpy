@@ -22,7 +22,12 @@ const authReducer = ( state: Auth = initialState, action:Action ) => {
         email: action.payload.email,
         isAuthenticated: action.payload.isAuthenticated
       }
-  
+    case TypeAuth.AUTHLOGOUT:
+      return {
+        ...state,
+        ...initialState 
+      }
+
     default:
       return state
   }

@@ -5,3 +5,7 @@ export const authLogin = ( user:Auth ) => ({
   type: TypeAuth.AUTHLOGIN,
   payload: { ...user }
 })
+
+export const authLogout = () => ({
+  type: TypeAuth.AUTHLOGOUT
+})

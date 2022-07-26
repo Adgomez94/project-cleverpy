@@ -1,0 +1,47 @@
+.container-auth{
+  width: 480px;
+  background-color: $secondary;
+  margin: 200px auto;
+}
+.header{
+  background-color: $green;
+  color: $white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 25px;
+  letter-spacing: 1px;
+}
+.wrap{
+  padding: 25px 40px 40px 40px ;
+  text-align: center;
+}
+.group{
+  padding: 15px;
+  width: 100%;
+
+
+}
+
+input{
+  background-color: $primary;
+  border-color: transparent;
+  display: inline-block;
+  height: 43px;
+  width: 100%;
+  outline: none;
+  color: $white;
+  letter-spacing: 1px;
+  font-weight: bold;
+
+}
+
+.error-message {
+  display: block;
+  padding: 1rem;
+  color: $white;
+  background-color: $red;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
